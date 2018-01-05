@@ -1,0 +1,29 @@
+#+OPTIONS: ^:nil \n:nil
+#+TITLE: tomcat-quiz-1002
+
+* tomcat-quiz-1002
+** 関連
+- 先行 [[file:tomcat-quiz-1001.org]]
+** 出題
+- 状況
+  - サービス tomcat のステータスとログを見た。
+  - ログの内容。
+    #+BEGIN_EXAMPLE
+    Java HotSpot(TM) 64-Bit Server VM warning: INFO: os::commit_memory(0x000000044a660000, 14...rno=12)
+    Native memory allocation (mmap) failed to map 14857928704 bytes for committing reserved memory.
+    #+END_EXAMPLE
+- 問
+  - サービス tomcat が起動しない理由は何か？
+** 回答
+*** 手順1
+- free -h #!搭載メモリ量を把握する
+- 例
+  #+BEGIN_EXAMPLE
+  $ free -h #!搭載メモリ量を把握する
+  #+END_EXAMPLE
+*** 手順2
+- サービス tomcat の JavaVM オプション ヒープサイズを把握する。
+- 例
+  #+BEGIN_EXAMPLE
+  $ grep Xm /usr/share/tomcat/conf/tomcat.conf #!サービス tomcat の JavaVM オプション ヒープサイズを把握する。
+  #+END_EXAMPLE
