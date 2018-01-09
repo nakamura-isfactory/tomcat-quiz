@@ -18,7 +18,7 @@
   - サービス tomcat が起動しない理由は何か？
 ** 回答
 *** 手順1
-- free -h #=搭載メモリ量を把握する
+- free -h #:搭載メモリ量を把握する
 - 例
   #+BEGIN_EXAMPLE
   $ free -h #:搭載メモリ量を把握する
@@ -29,3 +29,6 @@
   #+BEGIN_EXAMPLE
   $ grep Xm /usr/share/tomcat/conf/tomcat.conf #:サービス tomcat の JavaVM オプション ヒープサイズを把握する。
   #+END_EXAMPLE
+*** 手順3
+- 搭載メモリ量が JavaVM オプション ヒープサイズより少ない場合、起動失敗する原因はこれである。
+- 搭載メモリ量を増やすか、または、 JavaVM オプション ヒープサイズを減らしてから起動し直す。
