@@ -1,0 +1,9 @@
+#+OPTIONS: ^:nil \n:nil
+#+TITLE: Apache Tomcat quiz
+
+* Apache Tomcat quiz
+- [[file:tomcat-quiz-1001.org]]
+  - Tomcat プロセスが起動していない原因を調査したい。何をどうやって調べるか？
+- [[file:tomcat-quiz-1002.org]]
+  - サービス tomcat が起動しない理由は何か？
+

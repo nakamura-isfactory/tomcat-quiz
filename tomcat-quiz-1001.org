@@ -2,25 +2,26 @@
 #+TITLE: tomcat-quiz-1001
 
 * tomcat-quiz-1001
+** 文書ナビゲーション
+- [[file:index.org]]
 ** 関連
 - 後続 [[file:tomcat-quiz-1002.org]]
 ** 出題
 - 状況
   - マシンを再起動した後、 Tomcat プロセスが起動しているか否かを見たら、起動していなかった。
 - 問
-  - Tomcat プロセスが起動していない原因を調査したい。
-  - 何をどうやって調べるか？
+  - Tomcat プロセスが起動していない原因を調査したい。何をどうやって調べるか？
 ** 回答
 *** 手順1
 - OS version を把握する。
 - 例
   #+BEGIN_EXAMPLE
-  $ cat /etc/redhat-release # inspect OS version
+  $ cat /etc/redhat-release #:inspect OS version
   CentOS Linux release 7.1.1503 (Core)
   #+END_EXAMPLE
 *** 手順2
 - サービス tomcat のステータスとログを見る。
 - 例
   #+BEGIN_EXAMPLE
-  $ sudo service tomcat status # サービス tomcat のステータスとログを見る。
+  $ sudo service tomcat status #:サービス tomcat のステータスとログを見る。
   #+END_EXAMPLE
